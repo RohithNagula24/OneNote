@@ -1,0 +1,30 @@
+Authentication
+Method	Endpoint	Description
+POST	/auth/register	Register a new user
+POST	/auth/login	Login user
+POST	/auth/logout	Logout user
+
+User Management
+Method	Endpoint	Description
+GET	/users/search?name=xyz	Search users by name
+POST	/users/{userId}/follow	Follow a user
+DELETE	/users/{userId}/follow	Unfollow a user
+GET	/users/{userId}/followers	Get list of followers
+
+Post Management
+Method	Endpoint	Description
+POST	/posts	Create a new post
+GET	/posts/feed	Get posts from followed users
+POST	/posts/{postId}/like	Like a post
+POST	/posts/{postId}/comment	Comment on a post
+GET	/posts/{postId}/comments	Get comments for a post
+
+Chat
+Method	Endpoint	Description
+WS	/chat	WebSocket connection
+SEND	/app/chat/send	Send message
+SUB	/user/queue/chat	Subscribe to messages
+
+Notifications
+Method	Endpoint	Description
+SUB	/user/queue/notifications	Subscribe to notifications
